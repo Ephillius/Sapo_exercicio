@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Sapo</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -24,36 +25,79 @@
             </div>
         </div>
 
-        <div>
-        	<div class="geo1 rect1"></div>
+        <div class="geometry">
+        	<div class="geo rect1"></div>
 
-        	<div class="geo2 tri1"></div>
+        	<div class="geo tri1"></div>
 
-        	<div class="geo1 rect2"></div>
+        	<div class="geo rect2"></div>
 
-        	<div class="geo1 circle"></div>
+        	<div class="geo circle1"></div>
 
-        	<div class="geo2 tri2"></div>        	
+        	<!-- <div class="geo2 tri2"></div>  -->       	
         </div>
 
         <div class="icone-offset"></div>
+
+        <div class="color-app">
+			<div class="square left"></div>
+			<div class="square border">
+				<div class="square center"></div>
+			</div>
+			<div class="square right"></div>
+		</div>
 	</header>
 
 	<main>
-		<div class="color-app">
-			<div class="square left"></div>
-			<div class="square center"></div>
-			<div class="square right"></div>
-		</div>
-
-		<section>
-			<h1>Marca</h2>
-			<div class="geo2 tri2"></div>
+		<section class="info">
+			<div class="wrapper">
+				<div class="left-border"></div>
+				<h1>Marca</h1>
+				<!-- <div class="geo2 tri2"></div> -->
+			</div>
 
 			<h2>Sapo</h2>
-			<p>Estamos consigo desde 1995, mas ainda mal começámos a tocar o futuro. Apostamos na credibilidade, na criatividade, na inovação, na tecnologia e na proximidade. Somos o SAPO, vamos tornar a sua vida mais simples, mais informada, mais divertida, mais prática, aqui e em todo o mundo. Queremos estar na sua vida.</p>
+
+			<div class="intro">
+				<p>Estamos consigo desde 1995, mas ainda mal começámos a tocar o futuro.</p>
+				<img class="sapo-lean" src="assets/sapo.png" srcset="assets/sapo@2x.png 900w" alt="Sapo">
+			</div>
+
+			<div class="mission">
+				<div class="geo circle2"></div>
+				<p>Apostamos na credibilidade, na criatividade, na inovação, na tecnologia e na proximidade.</p> 
+
+				<p>Somos o SAPO, <span>vamos tornar a sua vida mais simples, mais informada, mais divertida, mais prática</span>, aqui e em todo o mundo.</p>
+				<p>Queremos estar na sua vida.</p>
+			</div>
+
+			<div class="collapse"></div>
+
+			<div class="links">
+				<a href="https://rd3.videos.sapo.pt/bRi3wOIOTyf2cWDtNkpj?jwsource=cl" target="_blank" class="link1">Manifesto</a>
+				<a href="https://rd3.videos.sapo.pt/niJFYO47fFYMVA638E6a?jwsource=cl" target="_blank" class="link2">O SAPO deu o salto</a>
+			</div>
 		</section>
 
+		<section class="game">
+			<div class="wrapper">
+				<div class="left-border"></div>
+				<h1>Marca</h1>
+			</div>
+
+			<h2>O SAPO <span><!--javascript actua aqui-->deu 127 saltos</span></h2>
+
+			<form class="table">
+				<input type="text" id="x" name="start" placeholder="X">
+				<input type="text" id="y" name="jumps" placeholder="Y">
+				<input type="text" id="d" name="destination" placeholder="D">
+
+				<input type="submit" value="Dá o salto">
+			</form>
+
+			<div class="mission">
+			</div>
+		</section>
 	</main>
 
 	<footer>
