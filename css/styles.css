@@ -18,22 +18,21 @@ body {
 
 header {
 	grid-area: header;
-	height: 43.375em;
+	height: 55.1875em;
 	background-color: #6E6E6E;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
-	clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
 }
 
 .header-overlay {
 	position: absolute;
     background: url(../assets/Sapo_background.png) no-repeat center;
-    background-size: 350%;
+    background-size: 400%;
     opacity: 0.1;
-    height: 110%;
+    height: inherit;
     width: 100%;
 }
 
 .header-container {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -69,8 +68,84 @@ header {
 	margin: 6px 0;
 }
 
+.geo1 {
+	position: absolute;
+	border: 6px solid #3399CC;
+}
+
+.geo2 {
+	position: absolute;
+}
+
+.rect1,
+.rect2 {
+	width: 16px;
+	height: 64px;
+	-moz-transform: rotate(300deg);
+	-webkit-transform: rotate(300deg);
+	-o-transform: rotate(300deg);
+	-ms-transform: rotate(300deg);
+	transform: rotate(300deg);
+}
+
+.rect1 {
+	top: 155px;
+    left: 182px;
+}
+
+.rect2 {
+	top: 345px;
+    left: 173px;
+}
+
+.tri1 {
+	top: 218px;
+    left: 87px;
+    border-left: 20px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 110px solid #3399CC;
+	-moz-transform: scale(-.4, .4) rotate(-75deg);
+	-webkit-transform: scale(-.4, .4) rotate(-75deg);
+	-o-transform: scale(-.4, .4) rotate(-75deg);
+	-ms-transform: scale(-.4, .4) rotate(-75deg);
+	transform: scale(-.4, .4) rotate(-75deg);
+}
+
+.circle {
+	border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    top: 404px;
+	left: 61px;
+}
+
+.tri2 {
+	top: 390px;
+	left: 203px;
+    border-left: 20px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 110px solid #3399CC;
+	-moz-transform: scale(-.7, .7) rotate(-25deg);
+	-webkit-transform: scale(-.7, .7) rotate(-25deg);
+	-o-transform: scale(-.7, .7) rotate(-25deg);
+	-ms-transform: scale(-.7, .7) rotate(-25deg);
+	transform: scale(-.7, .7) rotate(-25deg);
+}
+
+.icone-offset {
+	position: relative;
+    top: 382px;
+    width: 306px;
+    height: 189px;
+    margin: auto;
+    background: url(../assets/Sapo_simbolo.png) no-repeat -187px 25%;
+    background-size: 215%;
+}
+
 main {
 	grid-area: main;
+	/*-webkit-clip-path: polygon(0 15%, 100% 100%, 100% 100%, 0% 100%);
+	clip-path: polygon(0 15%, 100% 100%, 100% 100%, 0% 100%);*/
 }
 
 footer {
