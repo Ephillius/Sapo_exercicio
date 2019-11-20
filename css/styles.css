@@ -142,8 +142,8 @@ header {
     margin: 45px auto;
     width: 306px;
     height: 189px;
-    background: url(../assets/Sapo_simbolo.png) no-repeat -187px 25%;
-    background-size: 215%;
+    background: url(../assets/Sapo_simbolo.png) no-repeat center center;
+    background-size: 100%;
 }
 
 .color-app {
@@ -393,6 +393,41 @@ input[type="submit"] {
 	margin-top: 78px;
 }
 
+.result {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 551px;
+}
+
+.line {
+	position: absolute;
+	overflow: hidden;
+	height: 551px;
+	width: 264px;
+	margin: auto;
+	right: 0;
+}
+
+.line::after {
+	content: "";
+	position: absolute;
+	border-left: 29px dashed #3399CC;
+	transform: rotate(-30deg);
+	left: 70%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.player {
+	position: absolute;
+    left: 10%;
+    width: 160px;
+    height: 160px;
+    background: url(../assets/Sapo_simbolo.png) no-repeat center center;
+    background-size: 100%;
+}
 
 
 /*_FOOTER__________*/
