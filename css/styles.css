@@ -232,10 +232,6 @@ main {
 	margin: 29px auto 58px 32px;
 }
 
-h2 span {
-	text-transform: lowercase;
-}
-
 .intro {
 	display: flex;
 	justify-content: space-around;
@@ -345,6 +341,58 @@ h2 span {
 	-webkit-clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
 	clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
 }
+
+
+.game h2 {
+	margin-bottom: 20px;
+}
+
+.game h2 span {
+	text-transform: lowercase;
+}
+
+.table {
+	background-color: #CCC;
+	width: 100%;
+	padding-top: 103px;
+	padding-bottom: 80px;
+}
+
+form {
+	display: flex;
+	flex-flow: column;
+	margin: 0 40px;
+}
+
+input[type="text"] {
+	border: none;
+	border-bottom: 6px solid #000;
+	font: 700 40px/48px Roboto;
+	color: #000;
+	background-color: rgba(250, 250, 250, 0);
+	width: 240px;
+	align-self: flex-end;
+}
+
+input[type="text"] + input[type="text"] {
+	margin-top: 30px;
+}
+
+input[type="submit"] {
+	background-color: #7AB800;
+	border: none;
+	text-align: left;
+	-webkit-clip-path: polygon(0 0, 70% 0, 55% 100%, 0% 100%);
+	clip-path: polygon(0 0, 70% 0, 55% 100%, 0% 100%);
+	font: 400 26px/31px Roboto;
+	color: #fff;
+	cursor: pointer;
+	width: 100%;
+	height: 50px;
+	padding-left: 15px;
+	margin-top: 78px;
+}
+
 
 
 /*_FOOTER__________*/
