@@ -77,8 +77,9 @@
 				<img class="sapo-lean" src="assets/sapo.png" srcset="assets/sapo@2x.png 900w" alt="Sapo">
 			</div>
 
+			<div class="geo circle2"></div>
+
 			<div class="mission">
-				<div class="geo circle2"></div>
 				<p>Apostamos na credibilidade, na criatividade, na inovação, na tecnologia e na proximidade.</p> 
 
 				<p>Somos o SAPO, <span>vamos tornar a sua vida mais simples, mais informada, mais divertida, mais prática</span>, aqui e em todo o mundo.</p>
@@ -99,15 +100,15 @@
 				<h1>Marca</h1>
 			</div>
 
-			<h2>O SAPO <span><!--javascript actua aqui-->deu 127 saltos</span></h2>
+			<h2>O SAPO <span id="number"><!--javascript actua aqui-->saltou</span></h2>
 
 			<div class="table">
 				<form>
-					<input type="text" id="x" name="start" placeholder="X">
-					<input type="text" id="y" name="finish" placeholder="Y">
-					<input type="text" id="d" name="distance" placeholder="D">
+					<input type="number" id="x" name="start" min="0" onkeypress="return isNumber(event)" placeholder="X">
+					<input type="number" id="y" name="finish" min="0" onkeypress="return isNumber(event)" placeholder="Y">
+					<input type="number" id="d" name="distance" min="0" onkeypress="return isNumber(event)" placeholder="D">
 
-					<input type="submit" value="Dá o salto">
+					<input type="submit" id="total" value="Dá o salto">
 				</form>
 			</div>
 
