@@ -17,6 +17,44 @@ body {
 }
 
 
+/*_NAV___________*/
+
+
+#header-offset {
+	position: fixed;
+	margin: 0 auto;
+	background-color: #000;
+	height: 100%;
+	width: 0%;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	overflow-x: hidden;
+	transition: width 0.5s;
+}
+
+.nav-offset {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 64px auto auto 52px;
+	height: 156px;
+}
+
+.nav-offset a {
+	text-transform: uppercase;
+	text-decoration: none;
+	font: 400 30px/36px Roboto;
+	color: #FFF;
+	display: block;
+	transition: 0.3s;
+}
+
+.nav-offset a:hover {
+	color: #f1f1f1;
+}
+
+
 /*_HEADER_________*/
 
 
@@ -43,6 +81,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 61px 36px;
+	transition: right 0.5s;
 }
 
 .header-image {
@@ -57,7 +96,6 @@ header {
 }
 
 .header-open {
-	display: inline-block;
 	cursor: pointer;
 }
 
@@ -68,6 +106,7 @@ header {
 	height: 6px;
 	background-color: #000;
 	margin:0 auto;
+	transition: 0.4s;
 }
 
 .bar2 {
@@ -104,18 +143,21 @@ header {
 
 .rect2 {
     left: 45%;
+    top: 50px;
 }
 
 .tri1 {
-    left: 87px;
-    border-left: 20px solid transparent;
-    border-right: 80px solid transparent;
-    border-bottom: 110px solid #3399CC;
-	-moz-transform: scale(-.4, .4) rotate(-75deg);
-	-webkit-transform: scale(-.4, .4) rotate(-75deg);
-	-o-transform: scale(-.4, .4) rotate(-75deg);
-	-ms-transform: scale(-.4, .4) rotate(-75deg);
-	transform: scale(-.4, .4) rotate(-75deg);
+	left: 60px;
+    width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 50px 40px;
+	border-color: transparent transparent #3399CC transparent;
+	-moz-transform: rotate(70deg);
+	-webkit-transform: rotate(70deg);
+	-o-transform: rotate(70deg);
+	-ms-transform: rotate(70deg);
+	transform: rotate(70deg);
 }
 
 .circle1 {
@@ -123,18 +165,21 @@ header {
 	border: 6px solid #3399CC;
     width: 65px;
     height: 65px;
+    top: 50px;
 }
 
 .tri2 {
-	left: 203px;
-    border-left: 20px solid transparent;
-    border-right: 80px solid transparent;
-    border-bottom: 110px solid #3399CC;
-	-moz-transform: scale(-.7, .7) rotate(-25deg);
-	-webkit-transform: scale(-.7, .7) rotate(-25deg);
-	-o-transform: scale(-.7, .7) rotate(-25deg);
-	-ms-transform: scale(-.7, .7) rotate(-25deg);
-	transform: scale(-.7, .7) rotate(-25deg);
+    width: 0;
+	height: 0;
+	left: 140px;
+	border-style: solid;
+	border-width: 0 0 73px 71px;
+	border-color: transparent transparent #3399CC transparent;
+	-moz-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	transform: rotate(30deg);
 }
 
 .icone-offset {
@@ -223,6 +268,21 @@ main {
 	height: 104px;
 	width: 6px;
 	background-color: #666666;
+}
+
+.tri3 {
+    width: 0;
+	height: 0;
+	left: 65px;
+	bottom: 80px;
+	border-style: solid;
+	border-width: 0 0 73px 71px;
+	border-color: transparent transparent #3399CC transparent;
+	-moz-transform: rotate(110deg);
+	-webkit-transform: rotate(110deg);
+	-o-transform: rotate(110deg);
+	-ms-transform: rotate(110deg);
+	transform: rotate(110deg);
 }
 
 .wrapper + h2 {
@@ -413,6 +473,10 @@ input[type="submit"] {
 	content: "";
 	position: absolute;
 	border-left: 29px dashed #3399CC;
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
 	transform: rotate(-30deg);
 	left: 70%;
     right: 0;
@@ -457,3 +521,41 @@ footer {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+
+
+
+
+
+/*_EXTRA_____*/
+
+.switch .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.switch .bar2 {
+	opacity: 0;
+}
+
+.switch .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.width {
+	width: 75% !important;
+}
+
+.slide {
+	right: 70% !important;
+}
+
+.invis {
+	display: none !important;
+}
+
+.teal {
+	border-color: #33cc99;
+}
+
