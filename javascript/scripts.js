@@ -1,5 +1,6 @@
 var navButton = document.getElementById("btnOpen");
 var coll = document.querySelector(".collapse");
+var geometryList = document.querySelectorAll(".geo");
 
 
 
@@ -44,6 +45,12 @@ navButton.addEventListener("click", () => {
 //COLORS//
 
 document.getElementById("right").addEventListener("click", () => {
+	for (let i = 0; i < geometryList.length; i++) {
+		geometryList[i].classList.add("orange");
+	}
+});
+
+document.getElementById("left").addEventListener("click", () => {
 	for (let i = 0; i < geometryList.length; i++) {
 		geometryList[i].classList.add("teal");
 	}
