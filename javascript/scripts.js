@@ -1,6 +1,10 @@
 var navButton = document.getElementById("btnOpen");
 var coll = document.querySelector(".collapse");
 var geometryList = document.querySelectorAll(".geo");
+var left = document.getElementById("left");
+var border = document.getElementById("border");
+var center = document.getElementById("center");
+var right = document.getElementById("right");
 
 
 
@@ -36,24 +40,35 @@ function toggleClass(e, className) {
 
 navButton.addEventListener("click", () => {
 	toggle(navButton);
-	toggleClass("#header-offset", "width");
+	toggleClass("#nav-aside", "width");
 	toggleClass("#header", "slide");
 	toggleClass(".header-image", "invis");
+	toggleClass("body", "lock-scroll");
 });
 
 
 //COLORS//
 
-document.getElementById("right").addEventListener("click", () => {
+function colorApp(e) {
+	var first = window.getComputedStyle(e).backgroundColor;
+	var second = window.getComputedStyle(center).backgroundColor;
+
+	center.style.backgroundColor = first;
+	e.style.backgroundColor = second;
+	border.style.borderColor = first;
+
 	for (let i = 0; i < geometryList.length; i++) {
-		geometryList[i].classList.add("orange");
+		geometryList[i].style.borderColor = first;
 	}
+
+}
+
+left.addEventListener("click", () => {
+	colorApp(left);
 });
 
-document.getElementById("left").addEventListener("click", () => {
-	for (let i = 0; i < geometryList.length; i++) {
-		geometryList[i].classList.add("teal");
-	}
+right.addEventListener("click", () => {
+	colorApp(right);
 });
 
 
@@ -111,10 +126,15 @@ function isNumber(e) {
 
 
 document.querySelector('#total').addEventListener("click", (e) => {
-	var x = parseInt(document.querySelector('#x').value);
-	var y = parseInt(document.querySelector('#y').value);
-	var d = parseInt(document.querySelector('#d').value);
+	var x = document.querySelector('#x').value;
+	var y = document.querySelector('#y').value;
+	var d = document.querySelector('#d').value;
 
 	e.preventDefault();
-	document.querySelector("#number").innerHTML = "deu " + solution(x, y, d) + " saltos";
+	if (x.length < 1 || y.length < 1 || d.length < 1) {
+		alert("Please provide all numbers")
+	} else {
+		document.querySelector("#number").innerHTML = "deu " + solution(x, y, d) + " saltos";
+	}
+	
 }, false);
